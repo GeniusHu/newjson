@@ -1,12 +1,15 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { CodeBracketIcon, CheckCircleIcon, PencilIcon } from '@heroicons/react/24/outline'
+import { CodeBracketIcon, CheckCircleIcon, PencilIcon, ArrowsRightLeftIcon } from '@heroicons/react/24/outline'
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom'
 import JsonFormatter from './components/JsonFormatter'
 import JsonValidator from './components/JsonValidator'
 import JsonEditor from './components/JsonEditor'
+import Blog from './components/Blog'
+import XmlToJsonGuide from './components/articles/XmlToJsonGuide'
 import Footer from './components/Footer'
 import { trackPageView } from './utils/analytics'
+import JsonConverter from './components/JsonConverter'
 
 // 路由跟踪组件
 function RouteTracker() {
@@ -125,6 +128,24 @@ function Home() {
                 </p>
               </motion.div>
             </Link>
+
+            {/* JSON Converter 卡片 */}
+            <Link to="/converter">
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5 }}
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:transform hover:scale-105 
+                transition-all duration-300 border border-white/20"
+              >
+                <ArrowsRightLeftIcon className="w-12 h-12 text-yellow-400 mb-4" />
+                <h3 className="text-xl font-semibold mb-2 text-white">JSON Converter</h3>
+                <p className="text-gray-400">
+                  Convert JSON to various formats including XML, YAML, Java, Kotlin, and more. 
+                  Support for multiple programming languages.
+                </p>
+              </motion.div>
+            </Link>
           </div>
         </div>
       </section>
@@ -153,6 +174,8 @@ function App() {
                 <Link to="/formatter" className="hover:text-blue-400 transition-colors">JSON Formatter</Link>
                 <Link to="/validator" className="hover:text-blue-400 transition-colors">JSON Validator</Link>
                 <Link to="/editor" className="hover:text-blue-400 transition-colors">JSON Editor</Link>
+                <Link to="/converter" className="hover:text-blue-400 transition-colors">JSON Converter</Link>
+                <Link to="/blog" className="hover:text-blue-400 transition-colors">Blog</Link>
               </div>
             </div>
           </div>
@@ -165,6 +188,9 @@ function App() {
             <Route path="/formatter" element={<JsonFormatter />} />
             <Route path="/validator" element={<JsonValidator />} />
             <Route path="/editor" element={<JsonEditor />} />
+            <Route path="/converter" element={<JsonConverter />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/xml-to-json-conversion-guide" element={<XmlToJsonGuide />} />
           </Routes>
         </main>
 
