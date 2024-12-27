@@ -9,9 +9,10 @@ import JsonEditor from './components/JsonEditor'
 function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800">
-      {/* 英雄区域 */}
+      {/* 英雄区域 - 网站主要展示部分 */}
       <section className="pt-32 pb-20 px-4">
         <div className="container mx-auto text-center">
+          {/* 标题动画 */}
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -19,6 +20,7 @@ function Home() {
           >
             Professional <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">JSON Tools</span>
           </motion.h1>
+          {/* 描述文字动画 */}
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -27,6 +29,7 @@ function Home() {
           >
             Format, validate, and edit your JSON data with our powerful online tools.
           </motion.p>
+          {/* 主要行动按钮 */}
           <Link to="/formatter">
             <motion.button 
               initial={{ opacity: 0, y: 20 }}
@@ -103,11 +106,13 @@ function App() {
       <nav className="fixed top-0 w-full bg-black/20 backdrop-blur-lg z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
+            {/* Logo */}
             <Link to="/">
               <h1 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
                 JSON Tools
               </h1>
             </Link>
+            {/* 导航链接 */}
             <div className="hidden md:flex space-x-6 text-white">
               <Link to="/formatter" className="hover:text-blue-400 transition-colors">Formatter</Link>
               <Link to="/validator" className="hover:text-blue-400 transition-colors">Validator</Link>
@@ -117,6 +122,7 @@ function App() {
         </div>
       </nav>
 
+      {/* 路由配置 */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/formatter" element={<JsonFormatter />} />
