@@ -33,14 +33,24 @@ function Home() {
           >
             Professional <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">JSON Tools</span>
           </motion.h1>
+          {/* SEO优化的副标题 */}
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="text-2xl md:text-3xl font-semibold mb-4 text-gray-200"
+          >
+            Format, Validate, and Edit JSON Online
+          </motion.h2>
           {/* 描述文字动画 */}
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-xl text-gray-300 mb-8"
+            className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
           >
-            Format, validate, and edit your JSON data with our powerful online tools.
+            Free online JSON tools for developers. Format JSON with custom indentation, 
+            validate JSON syntax, and edit JSON with real-time preview. Simple, fast, and secure.
           </motion.p>
           {/* 主要行动按钮 */}
           <Link to="/formatter">
@@ -51,14 +61,14 @@ function Home() {
               className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-semibold 
               text-white hover:from-blue-600 hover:to-purple-700 transition-all duration-300 shadow-lg"
             >
-              Try JSON Formatter
+              Try JSON Formatter Now
             </motion.button>
           </Link>
         </div>
       </section>
 
       {/* 功能卡片区域 */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4" aria-label="Features">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-3 gap-8">
             {/* JSON Formatter 卡片 */}
@@ -72,7 +82,10 @@ function Home() {
               >
                 <CodeBracketIcon className="w-12 h-12 text-blue-400 mb-4" />
                 <h3 className="text-xl font-semibold mb-2 text-white">JSON Formatter</h3>
-                <p className="text-gray-400">Format and beautify your JSON data with custom indentation and syntax highlighting.</p>
+                <p className="text-gray-400">
+                  Format and beautify your JSON data with custom indentation, syntax highlighting, 
+                  and key sorting. Support for file upload and copying to clipboard.
+                </p>
               </motion.div>
             </Link>
 
@@ -87,7 +100,10 @@ function Home() {
               >
                 <CheckCircleIcon className="w-12 h-12 text-green-400 mb-4" />
                 <h3 className="text-xl font-semibold mb-2 text-white">JSON Validator</h3>
-                <p className="text-gray-400">Validate your JSON data structure and quickly identify syntax errors.</p>
+                <p className="text-gray-400">
+                  Validate your JSON data structure with detailed error messages. 
+                  Real-time validation and syntax checking for quick debugging.
+                </p>
               </motion.div>
             </Link>
 
@@ -102,7 +118,10 @@ function Home() {
               >
                 <PencilIcon className="w-12 h-12 text-purple-400 mb-4" />
                 <h3 className="text-xl font-semibold mb-2 text-white">JSON Editor</h3>
-                <p className="text-gray-400">Powerful JSON editor with real-time preview and auto-completion.</p>
+                <p className="text-gray-400">
+                  Powerful JSON editor with real-time preview, syntax highlighting, 
+                  and auto-completion. Edit and validate JSON simultaneously.
+                </p>
               </motion.div>
             </Link>
           </div>
@@ -125,14 +144,14 @@ function App() {
             {/* Logo */}
             <Link to="/">
               <h1 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
-                JSON Tools
+                JSON Tools - Format & Validate
               </h1>
             </Link>
             {/* 导航链接 */}
             <div className="hidden md:flex space-x-6 text-white">
-              <Link to="/formatter" className="hover:text-blue-400 transition-colors">Formatter</Link>
-              <Link to="/validator" className="hover:text-blue-400 transition-colors">Validator</Link>
-              <Link to="/editor" className="hover:text-blue-400 transition-colors">Editor</Link>
+              <Link to="/formatter" className="hover:text-blue-400 transition-colors">JSON Formatter</Link>
+              <Link to="/validator" className="hover:text-blue-400 transition-colors">JSON Validator</Link>
+              <Link to="/editor" className="hover:text-blue-400 transition-colors">JSON Editor</Link>
             </div>
           </div>
         </div>
