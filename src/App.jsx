@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react
 import JsonFormatter from './components/JsonFormatter'
 import JsonValidator from './components/JsonValidator'
 import JsonEditor from './components/JsonEditor'
+import Footer from './components/Footer'
 import { trackPageView } from './utils/analytics'
 
 // 路由跟踪组件
@@ -134,36 +135,42 @@ function Home() {
 function App() {
   return (
     <Router>
-      {/* 添加路由跟踪 */}
-      <RouteTracker />
-      
-      {/* 导航栏 */}
-      <nav className="fixed top-0 w-full bg-black/20 backdrop-blur-lg z-50">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            {/* Logo */}
-            <Link to="/">
-              <h1 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
-                JSON Tools - Format & Validate
-              </h1>
-            </Link>
-            {/* 导航链接 */}
-            <div className="hidden md:flex space-x-6 text-white">
-              <Link to="/formatter" className="hover:text-blue-400 transition-colors">JSON Formatter</Link>
-              <Link to="/validator" className="hover:text-blue-400 transition-colors">JSON Validator</Link>
-              <Link to="/editor" className="hover:text-blue-400 transition-colors">JSON Editor</Link>
+      <div className="min-h-screen flex flex-col">
+        <RouteTracker />
+        
+        {/* 导航栏 */}
+        <nav className="fixed top-0 w-full bg-black/20 backdrop-blur-lg z-50">
+          <div className="container mx-auto px-4 py-4">
+            <div className="flex items-center justify-between">
+              {/* Logo */}
+              <Link to="/">
+                <h1 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+                  JSON Tools - Format & Validate
+                </h1>
+              </Link>
+              {/* 导航链接 */}
+              <div className="hidden md:flex space-x-6 text-white">
+                <Link to="/formatter" className="hover:text-blue-400 transition-colors">JSON Formatter</Link>
+                <Link to="/validator" className="hover:text-blue-400 transition-colors">JSON Validator</Link>
+                <Link to="/editor" className="hover:text-blue-400 transition-colors">JSON Editor</Link>
+              </div>
             </div>
           </div>
-        </div>
-      </nav>
+        </nav>
 
-      {/* 路由配置 */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/formatter" element={<JsonFormatter />} />
-        <Route path="/validator" element={<JsonValidator />} />
-        <Route path="/editor" element={<JsonEditor />} />
-      </Routes>
+        {/* 主要内容区域 */}
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/formatter" element={<JsonFormatter />} />
+            <Route path="/validator" element={<JsonValidator />} />
+            <Route path="/editor" element={<JsonEditor />} />
+          </Routes>
+        </main>
+
+        {/* 页脚 */}
+        <Footer />
+      </div>
     </Router>
   )
 }
