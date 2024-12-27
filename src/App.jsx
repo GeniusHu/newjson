@@ -1,10 +1,23 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { CodeBracketIcon, CheckCircleIcon, PencilIcon } from '@heroicons/react/24/outline'
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom'
 import JsonFormatter from './components/JsonFormatter'
 import JsonValidator from './components/JsonValidator'
 import JsonEditor from './components/JsonEditor'
+import { trackPageView } from './utils/analytics'
+
+// 路由跟踪组件
+function RouteTracker() {
+  const location = useLocation();
+
+  useEffect(() => {
+    // 跟踪页面访问
+    trackPageView(location.pathname);
+  }, [location]);
+
+  return null;
+}
 
 function Home() {
   return (
@@ -102,6 +115,9 @@ function Home() {
 function App() {
   return (
     <Router>
+      {/* 添加路由跟踪 */}
+      <RouteTracker />
+      
       {/* 导航栏 */}
       <nav className="fixed top-0 w-full bg-black/20 backdrop-blur-lg z-50">
         <div className="container mx-auto px-4 py-4">

@@ -7,6 +7,7 @@
 | `vite.config.js` | `/` | Vite构建配置 |
 | `postcss.config.js` | `/` | CSS处理配置 |
 | `tailwind.config.js` | `/` | Tailwind样式配置 |
+| `index.html` | `/` | HTML入口和GA配置 |
 
 ## 源代码文件
 | 文件名 | 位置 | 主要用途 |
@@ -14,6 +15,7 @@
 | `main.jsx` | `/src` | 应用入口 |
 | `App.jsx` | `/src` | 根组件和路由 |
 | `index.css` | `/src` | 全局样式 |
+| `analytics.js` | `/src/utils` | GA跟踪工具 |
 
 ## 功能组件
 | 文件名 | 位置 | 主要用途 |
@@ -45,4 +47,9 @@
 
 ### 构建配置
 - 构建选项 → `vite.config.js`
-- 依赖管理 → `package.json` 
+- 依赖管理 → `package.json`
+
+### 分析跟踪
+- Google Analytics配置 → `index.html`
+- 跟踪工具 → `src/utils/analytics.js`
+- 路由跟踪 → `src/App.jsx` 
