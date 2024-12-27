@@ -1,30 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <!-- SEO Meta Tags -->
+    <!-- 性能优化 Meta 标签 -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    
+    <!-- 预加载关键资源 -->
+    <link rel="preload" href="/src/index.css" as="style">
+    <link rel="preload" href="/src/main.jsx" as="script">
+    
+    <!-- 预连接到第三方域名 -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    
+    <!-- 使用 modulepreload 预加载 ES modules -->
+    <link rel="modulepreload" href="/src/App.jsx">
+    <link rel="modulepreload" href="/src/components/JsonFormatter.jsx">
+    
+    <!-- PWA meta tags -->
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
     <title>JSON Tools - Professional JSON Formatter, Validator and Editor</title>
-    <meta name="description" content="Free online JSON tools including formatter, validator, and editor. Format JSON with custom indentation, validate JSON syntax, and edit JSON with real-time preview." />
-    <meta name="keywords" content="JSON formatter, JSON validator, JSON editor, JSON tools, JSON beautifier, JSON parser, online JSON tools" />
-    <meta name="author" content="JSON Tools" />
-    <meta name="robots" content="index, follow" />
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="JSON Tools - Professional JSON Formatter, Validator and Editor" />
-    <meta property="og:description" content="Free online JSON tools including formatter, validator, and editor. Format JSON with custom indentation, validate JSON syntax, and edit JSON with real-time preview." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://newjson-2j5o9ace1-hus-projects-78de16e7.vercel.app/" />
-    
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="JSON Tools - Professional JSON Formatter, Validator and Editor" />
-    <meta name="twitter:description" content="Free online JSON tools including formatter, validator, and editor. Format JSON with custom indentation, validate JSON syntax, and edit JSON with real-time preview." />
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://newjson-2j5o9ace1-hus-projects-78de16e7.vercel.app/" />
     
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3VTNFXX6T"></script>
@@ -33,33 +34,6 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-Q3VTNFXX6T');
-    </script>
-
-    <!-- 结构化数据 -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "JSON Tools",
-      "description": "Free online JSON tools including formatter, validator, and editor. Format JSON with custom indentation, validate JSON syntax, and edit JSON with real-time preview.",
-      "url": "https://newjson-2j5o9ace1-hus-projects-78de16e7.vercel.app/",
-      "applicationCategory": "DeveloperApplication",
-      "operatingSystem": "All",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "featureList": [
-        "JSON Formatting with custom indentation",
-        "JSON Validation with error detection",
-        "Real-time JSON Editing with preview",
-        "File upload support",
-        "Copy to clipboard functionality"
-      ],
-      "browserRequirements": "Requires a modern web browser",
-      "softwareVersion": "1.0.0"
-    }
     </script>
   </head>
   <body>

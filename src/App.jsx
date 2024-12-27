@@ -1,15 +1,17 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, lazy, Suspense } from 'react'
 import { motion } from 'framer-motion'
 import { CodeBracketIcon, CheckCircleIcon, PencilIcon, ArrowsRightLeftIcon } from '@heroicons/react/24/outline'
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom'
-import JsonFormatter from './components/JsonFormatter'
-import JsonValidator from './components/JsonValidator'
-import JsonEditor from './components/JsonEditor'
-import Blog from './components/Blog'
-import XmlToJsonGuide from './components/articles/XmlToJsonGuide'
-import Footer from './components/Footer'
 import { trackPageView } from './utils/analytics'
-import JsonConverter from './components/JsonConverter'
+
+// 懒加载组件
+const JsonFormatter = lazy(() => import('./components/JsonFormatter'))
+const JsonValidator = lazy(() => import('./components/JsonValidator'))
+const JsonEditor = lazy(() => import('./components/JsonEditor'))
+const JsonConverter = lazy(() => import('./components/JsonConverter'))
+const Blog = lazy(() => import('./components/Blog'))
+const XmlToJsonGuide = lazy(() => import('./components/articles/XmlToJsonGuide'))
+const Footer = lazy(() => import('./components/Footer'))
 
 // 路由跟踪组件
 function RouteTracker() {
@@ -153,6 +155,15 @@ function Home() {
   )
 }
 
+// 加载动画组件
+function LoadingSpinner() {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800">
+      <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
+    </div>
+  )
+}
+
 function App() {
   return (
     <Router>
@@ -183,19 +194,23 @@ function App() {
 
         {/* 主要内容区域 */}
         <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/formatter" element={<JsonFormatter />} />
-            <Route path="/validator" element={<JsonValidator />} />
-            <Route path="/editor" element={<JsonEditor />} />
-            <Route path="/converter" element={<JsonConverter />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/xml-to-json-conversion-guide" element={<XmlToJsonGuide />} />
-          </Routes>
+          <Suspense fallback={<LoadingSpinner />}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/formatter" element={<JsonFormatter />} />
+              <Route path="/validator" element={<JsonValidator />} />
+              <Route path="/editor" element={<JsonEditor />} />
+              <Route path="/converter" element={<JsonConverter />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/xml-to-json-conversion-guide" element={<XmlToJsonGuide />} />
+            </Routes>
+          </Suspense>
         </main>
 
         {/* 页脚 */}
-        <Footer />
+        <Suspense fallback={null}>
+          <Footer />
+        </Suspense>
       </div>
     </Router>
   )

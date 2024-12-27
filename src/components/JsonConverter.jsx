@@ -406,7 +406,7 @@ export default function JsonConverter() {
           </div>
         </div>
 
-        {/* 错误提示 - 居中显示的 Toast */}
+        {/* 错误提示 Toast */}
         <AnimatePresence>
           {error && (
             <motion.div
@@ -432,7 +432,7 @@ export default function JsonConverter() {
           )}
         </AnimatePresence>
 
-        {/* 复制成功提示 */}
+        {/* 复制成��提示 Toast */}
         <AnimatePresence>
           {showCopySuccess && (
             <motion.div
@@ -445,7 +445,9 @@ export default function JsonConverter() {
             >
               <div className="flex items-center gap-3">
                 <div className="flex-shrink-0 w-10 h-10 bg-green-600 rounded-full flex items-center justify-center">
-                  <CheckCircleIcon className="w-6 h-6" />
+                  <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
                 </div>
                 <div className="flex-1">
                   <h3 className="text-lg font-semibold mb-1">Success</h3>
