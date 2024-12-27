@@ -1,3 +1,36 @@
+/**
+ * JSON转换工具组件
+ * 
+ * 功能特点:
+ * 1. 支持多种格式转换:
+ *    - XML
+ *    - YAML
+ *    - Java类
+ *    - Kotlin数据类
+ *    - TypeScript接口
+ *    - C#类
+ *    - Python类
+ *    - Go结构体
+ * 2. 实时预览
+ * 3. 语法高亮
+ * 4. 文件上传支持
+ * 5. 拖拽上传
+ * 6. 复制到剪贴板
+ * 
+ * 使用说明:
+ * 1. 在左侧输入框输入或粘贴JSON
+ * 2. 从下拉菜单选择目标格式
+ * 3. 转换结果将在右侧实时显示
+ * 4. 可以使用复制按钮复制转换结果
+ * 5. 支持通过上传按钮或拖拽方式导入JSON文件
+ * 
+ * 注意事项:
+ * 1. 输入必须是有效的JSON格式
+ * 2. 文件大小限制为5MB
+ * 3. 仅支持JSON和文本文件
+ * 4. 某些复杂的JSON结构可能需要手动调整转换结果
+ */
+
 import { useState, useEffect, useRef } from 'react';
 import Editor from '@monaco-editor/react';
 import { motion, AnimatePresence } from 'framer-motion';

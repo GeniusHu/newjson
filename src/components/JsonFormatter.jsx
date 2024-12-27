@@ -1,3 +1,29 @@
+/**
+ * JSON格式化工具组件
+ * 
+ * 功能特点:
+ * 1. JSON格式化和压缩
+ * 2. 自定义缩进大小
+ * 3. 键值排序选项
+ * 4. 文件上传支持
+ * 5. 复制到剪贴板
+ * 6. 实时错误检测
+ * 7. 拖拽上传
+ * 
+ * 使用说明:
+ * 1. 直接在输入框粘贴或输入JSON
+ * 2. 使用上传按钮或拖拽上传JSON文件
+ * 3. 调整缩进大小(2-8空格)
+ * 4. 可选择是否对键进行排序
+ * 5. 点击格式化按钮进行美化
+ * 6. 使用复制按钮复制结果
+ * 
+ * 注意事项:
+ * 1. 文件大小限制为5MB
+ * 2. 仅支持JSON和文本文件
+ * 3. 输入必须是有效的JSON格式
+ */
+
 import { useState, useCallback, useEffect, useRef } from 'react';
 import Editor from '@monaco-editor/react';
 import { motion } from 'framer-motion';
