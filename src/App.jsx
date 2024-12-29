@@ -1,19 +1,20 @@
-import { useEffect } from 'react'
-import { motion } from 'framer-motion'
-import { CodeBracketIcon, CheckCircleIcon, PencilIcon, ArrowsRightLeftIcon } from '@heroicons/react/24/outline'
-import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom'
-import { useTranslation } from 'react-i18next'
-import { trackPageView } from './utils/analytics'
-import JsonFormatter from './components/JsonFormatter'
-import JsonValidator from './components/JsonValidator'
-import JsonEditor from './components/JsonEditor'
-import JsonConverter from './components/JsonConverter'
-import Blog from './components/Blog'
-import XmlToJsonGuide from './components/articles/XmlToJsonGuide'
-import NotFound from './components/NotFound'
-import Footer from './components/Footer'
-import Breadcrumb from './components/Breadcrumb'
-import LanguageSwitcher from './components/LanguageSwitcher'
+import { useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { CodeBracketIcon, CheckCircleIcon, PencilIcon, ArrowsRightLeftIcon, DocumentTextIcon } from '@heroicons/react/24/outline';
+import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { trackPageView } from './utils/analytics';
+import JsonFormatter from './components/JsonFormatter';
+import JsonValidator from './components/JsonValidator';
+import JsonEditor from './components/JsonEditor';
+import JsonConverter from './components/JsonConverter';
+import XmlConverter from './components/XmlConverter';
+import Blog from './components/Blog';
+import XmlToJsonGuide from './components/articles/XmlToJsonGuide';
+import NotFound from './components/NotFound';
+import Footer from './components/Footer';
+import Breadcrumb from './components/Breadcrumb';
+import LanguageSwitcher from './components/LanguageSwitcher';
 
 // 主应用组件
 function AppContent() {
@@ -51,6 +52,10 @@ function AppContent() {
               <Link to="/converter" className="hover:text-blue-400 transition-colors">
                 {t('common.convert')}
               </Link>
+              <Link to="/xml" className="hover:text-blue-400 transition-colors flex items-center gap-1">
+                <DocumentTextIcon className="w-5 h-5" />
+                XML
+              </Link>
               <Link to="/blog" className="hover:text-blue-400 transition-colors">
                 Blog
               </Link>
@@ -73,6 +78,7 @@ function AppContent() {
           <Route path="/validator" element={<JsonValidator />} />
           <Route path="/editor" element={<JsonEditor />} />
           <Route path="/converter" element={<JsonConverter />} />
+          <Route path="/xml" element={<XmlConverter />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/xml-to-json-conversion-guide" element={<XmlToJsonGuide />} />
           <Route path="*" element={<NotFound />} />
@@ -175,7 +181,7 @@ function Home() {
         </div>
       </section>
     </div>
-  )
+  );
 }
 
 // App 组件
@@ -187,4 +193,4 @@ function App() {
   );
 }
 
-export default App
+export default App;

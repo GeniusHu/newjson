@@ -1,0 +1,49 @@
+{
+  "common": {
+    "format": "格式化",
+    "validate": "验证",
+    "edit": "编辑",
+    "convert": "转换",
+    "copy": "复制",
+    "clear": "清除",
+    "upload": "上传",
+    "error": "错误",
+    "success": "成功"
+  },
+  "home": {
+    "title": "JSON 工具集",
+    "subtitle": "简单、快速、高效的 JSON 处理工具",
+    "description": "提供格式化、验证、编辑、转换等多种 JSON 处理功能，让您的开发工作更轻松。",
+    "tryNow": "立即使用"
+  },
+  "formatter": {
+    "title": "JSON 格式化",
+    "description": "美化和格式化 JSON 数据，使其更易读和理解"
+  },
+  "validator": {
+    "title": "JSON 验证",
+    "description": "验证 JSON 数据的有效性，快速发现语法错误"
+  },
+  "editor": {
+    "title": "JSON 编辑器",
+    "description": "在线编辑和修改 JSON 数据，支持实时预览"
+  },
+  "converter": {
+    "title": "JSON 转换器",
+    "description": "在不同数据格式之间转换，支持多种格式"
+  },
+  "xml": {
+    "title": "XML 转换器",
+    "description": "在 XML 和 JSON 格式之间轻松转换",
+    "xmlInput": "XML 输入",
+    "jsonInput": "JSON 输入",
+    "xmlOutput": "XML 输出",
+    "jsonOutput": "JSON 输出",
+    "convert": "转换",
+    "switchMode": "切换模式",
+    "xmlToJson": "XML → JSON",
+    "jsonToXml": "JSON → XML",
+    "invalidXml": "无效的 XML 格式",
+    "invalidJson": "无效的 JSON 格式"
+  }
+} 

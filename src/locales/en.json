@@ -1,0 +1,49 @@
+{
+  "common": {
+    "format": "Format",
+    "validate": "Validate",
+    "edit": "Edit",
+    "convert": "Convert",
+    "copy": "Copy",
+    "clear": "Clear",
+    "upload": "Upload",
+    "error": "Error",
+    "success": "Success"
+  },
+  "home": {
+    "title": "JSON Tools",
+    "subtitle": "Simple, Fast, and Efficient JSON Processing Tools",
+    "description": "Provides formatting, validation, editing, conversion, and more JSON processing features to make your development work easier.",
+    "tryNow": "Try Now"
+  },
+  "formatter": {
+    "title": "JSON Formatter",
+    "description": "Beautify and format JSON data for better readability"
+  },
+  "validator": {
+    "title": "JSON Validator",
+    "description": "Validate JSON data and quickly find syntax errors"
+  },
+  "editor": {
+    "title": "JSON Editor",
+    "description": "Edit and modify JSON data online with real-time preview"
+  },
+  "converter": {
+    "title": "JSON Converter",
+    "description": "Convert between different data formats"
+  },
+  "xml": {
+    "title": "XML Converter",
+    "description": "Convert between XML and JSON formats with ease",
+    "xmlInput": "XML Input",
+    "jsonInput": "JSON Input",
+    "xmlOutput": "XML Output",
+    "jsonOutput": "JSON Output",
+    "convert": "Convert",
+    "switchMode": "Switch Mode",
+    "xmlToJson": "XML → JSON",
+    "jsonToXml": "JSON → XML",
+    "invalidXml": "Invalid XML format",
+    "invalidJson": "Invalid JSON format"
+  }
+} 
