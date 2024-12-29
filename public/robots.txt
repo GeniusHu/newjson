@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://newjson-2j5o9ace1-hus-projects-78de16e7.vercel.app/sitemap.xml 
+# 站点地图
+Sitemap: https://jsontools.vercel.app/sitemap.xml 

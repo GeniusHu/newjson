@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { CodeBracketIcon, CheckCircleIcon, PencilIcon, ArrowsRightLeftIcon } from '@heroicons/react/24/outline'
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { trackPageView } from './utils/analytics'
 import JsonFormatter from './components/JsonFormatter'
 import JsonValidator from './components/JsonValidator'
@@ -9,11 +10,15 @@ import JsonEditor from './components/JsonEditor'
 import JsonConverter from './components/JsonConverter'
 import Blog from './components/Blog'
 import XmlToJsonGuide from './components/articles/XmlToJsonGuide'
+import NotFound from './components/NotFound'
 import Footer from './components/Footer'
+import Breadcrumb from './components/Breadcrumb'
+import LanguageSwitcher from './components/LanguageSwitcher'
 
 // 主应用组件
 function AppContent() {
   const location = useLocation();
+  const { t } = useTranslation();
 
   // 监听路由变化时跟踪页面访问
   useEffect(() => {
@@ -33,16 +38,32 @@ function AppContent() {
               </h1>
             </Link>
             {/* 导航链接 */}
-            <div className="hidden md:flex space-x-6 text-white">
-              <Link to="/formatter" className="hover:text-blue-400 transition-colors">JSON Formatter</Link>
-              <Link to="/validator" className="hover:text-blue-400 transition-colors">JSON Validator</Link>
-              <Link to="/editor" className="hover:text-blue-400 transition-colors">JSON Editor</Link>
-              <Link to="/converter" className="hover:text-blue-400 transition-colors">JSON Converter</Link>
-              <Link to="/blog" className="hover:text-blue-400 transition-colors">Blog</Link>
+            <div className="hidden md:flex items-center space-x-6 text-white">
+              <Link to="/formatter" className="hover:text-blue-400 transition-colors">
+                {t('common.format')}
+              </Link>
+              <Link to="/validator" className="hover:text-blue-400 transition-colors">
+                {t('common.validate')}
+              </Link>
+              <Link to="/editor" className="hover:text-blue-400 transition-colors">
+                {t('common.edit')}
+              </Link>
+              <Link to="/converter" className="hover:text-blue-400 transition-colors">
+                {t('common.convert')}
+              </Link>
+              <Link to="/blog" className="hover:text-blue-400 transition-colors">
+                Blog
+              </Link>
+              <LanguageSwitcher />
             </div>
           </div>
         </div>
       </nav>
+
+      {/* 面包屑导航 */}
+      <div className="mt-16">
+        <Breadcrumb />
+      </div>
 
       {/* 主要内容区域 */}
       <main className="flex-grow">
@@ -54,6 +75,7 @@ function AppContent() {
           <Route path="/converter" element={<JsonConverter />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/xml-to-json-conversion-guide" element={<XmlToJsonGuide />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
 
@@ -65,6 +87,8 @@ function AppContent() {
 
 // Home 组件
 function Home() {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800">
       {/* 英雄区域 */}
@@ -76,19 +100,20 @@ function Home() {
             transition={{ duration: 0.5 }}
           >
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
-              Professional <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">JSON Tools</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+                {t('home.title')}
+              </span>
             </h1>
             <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-gray-200">
-              Format, Validate, and Edit JSON Online
+              {t('home.subtitle')}
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Free online JSON tools for developers. Format JSON with custom indentation, 
-              validate JSON syntax, and edit JSON with real-time preview. Simple, fast, and secure.
+              {t('home.description')}
             </p>
             <Link to="/formatter">
               <button className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-semibold 
                 text-white hover:from-blue-600 hover:to-purple-700 transition-all duration-300 shadow-lg">
-                Try JSON Formatter Now
+                {t('home.tryNow')}
               </button>
             </Link>
           </motion.div>
@@ -104,10 +129,9 @@ function Home() {
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 transition-all duration-300 
                 hover:scale-105 border border-white/20">
                 <CodeBracketIcon className="w-12 h-12 text-blue-400 mb-4" />
-                <h3 className="text-xl font-semibold mb-2 text-white">JSON Formatter</h3>
+                <h3 className="text-xl font-semibold mb-2 text-white">{t('formatter.title')}</h3>
                 <p className="text-gray-400">
-                  Format and beautify your JSON data with custom indentation, syntax highlighting, 
-                  and key sorting.
+                  {t('formatter.description')}
                 </p>
               </div>
             </Link>
@@ -117,9 +141,9 @@ function Home() {
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 transition-all duration-300 
                 hover:scale-105 border border-white/20">
                 <CheckCircleIcon className="w-12 h-12 text-green-400 mb-4" />
-                <h3 className="text-xl font-semibold mb-2 text-white">JSON Validator</h3>
+                <h3 className="text-xl font-semibold mb-2 text-white">{t('validator.title')}</h3>
                 <p className="text-gray-400">
-                  Validate your JSON data structure with detailed error messages and real-time checking.
+                  {t('validator.description')}
                 </p>
               </div>
             </Link>
@@ -129,9 +153,9 @@ function Home() {
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 transition-all duration-300 
                 hover:scale-105 border border-white/20">
                 <PencilIcon className="w-12 h-12 text-purple-400 mb-4" />
-                <h3 className="text-xl font-semibold mb-2 text-white">JSON Editor</h3>
+                <h3 className="text-xl font-semibold mb-2 text-white">{t('editor.title')}</h3>
                 <p className="text-gray-400">
-                  Powerful JSON editor with real-time preview and syntax highlighting.
+                  {t('editor.description')}
                 </p>
               </div>
             </Link>
@@ -141,9 +165,9 @@ function Home() {
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 transition-all duration-300 
                 hover:scale-105 border border-white/20">
                 <ArrowsRightLeftIcon className="w-12 h-12 text-yellow-400 mb-4" />
-                <h3 className="text-xl font-semibold mb-2 text-white">JSON Converter</h3>
+                <h3 className="text-xl font-semibold mb-2 text-white">{t('converter.title')}</h3>
                 <p className="text-gray-400">
-                  Convert JSON to various formats including XML, YAML, Java, and more.
+                  {t('converter.description')}
                 </p>
               </div>
             </Link>

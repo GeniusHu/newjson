@@ -1,0 +1,58 @@
+{
+  "common": {
+    "tools": "Tools",
+    "features": "Features",
+    "about": "About",
+    "contact": "Contact",
+    "copy": "Copy",
+    "upload": "Upload",
+    "clear": "Clear",
+    "format": "Format",
+    "validate": "Validate",
+    "convert": "Convert",
+    "edit": "Edit",
+    "success": "Success",
+    "error": "Error",
+    "copied": "Copied to clipboard!",
+    "dropFile": "Drop JSON file here"
+  },
+  "home": {
+    "title": "Professional JSON Tools",
+    "subtitle": "Format, Validate, and Edit JSON Online",
+    "description": "Free online JSON tools for developers. Format JSON with custom indentation, validate JSON syntax, and edit JSON with real-time preview. Simple, fast, and secure.",
+    "tryNow": "Try JSON Formatter Now"
+  },
+  "formatter": {
+    "title": "JSON Formatter",
+    "description": "Paste your JSON below and click format to beautify it.",
+    "indentation": "Spaces",
+    "sortKeys": "Sort Keys",
+    "compress": "Compress",
+    "expand": "Expand",
+    "input": "Input",
+    "output": "Output"
+  },
+  "validator": {
+    "title": "JSON Validator",
+    "description": "Validate your JSON and get detailed error messages.",
+    "validJson": "Valid JSON",
+    "invalidJson": "Invalid JSON"
+  },
+  "converter": {
+    "title": "JSON Format Converter",
+    "description": "Convert JSON to various formats including XML, YAML, and programming language classes",
+    "selectFormat": "Select Format",
+    "jsonInput": "JSON Input",
+    "formatOutput": "{{format}} Output"
+  },
+  "editor": {
+    "title": "JSON Editor",
+    "description": "Edit your JSON with real-time preview and validation.",
+    "editor": "Editor",
+    "preview": "Preview"
+  },
+  "footer": {
+    "rights": "© 2024 JSON Tools. All rights reserved.",
+    "builtWith": "Built with ❤️ for developers worldwide"
+  }
+} 

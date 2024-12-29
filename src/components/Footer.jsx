@@ -1,29 +1,32 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 export default function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className="bg-gray-900 text-gray-300 py-12 mt-auto">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* 工具链接 */}
           <div>
-            <h4 className="text-white font-semibold mb-4">JSON Tools</h4>
+            <h4 className="text-white font-semibold mb-4">{t('common.tools')}</h4>
             <ul className="space-y-2">
-              <li><Link to="/formatter" className="hover:text-blue-400 transition-colors">JSON Formatter</Link></li>
-              <li><Link to="/validator" className="hover:text-blue-400 transition-colors">JSON Validator</Link></li>
-              <li><Link to="/editor" className="hover:text-blue-400 transition-colors">JSON Editor</Link></li>
+              <li><Link to="/formatter" className="hover:text-blue-400 transition-colors">{t('formatter.title')}</Link></li>
+              <li><Link to="/validator" className="hover:text-blue-400 transition-colors">{t('validator.title')}</Link></li>
+              <li><Link to="/editor" className="hover:text-blue-400 transition-colors">{t('editor.title')}</Link></li>
             </ul>
           </div>
 
           {/* 功能特点 */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Features</h4>
+            <h4 className="text-white font-semibold mb-4">{t('common.features')}</h4>
             <ul className="space-y-2">
-              <li>Custom Indentation</li>
-              <li>Syntax Highlighting</li>
-              <li>Error Detection</li>
-              <li>File Upload Support</li>
-              <li>Real-time Preview</li>
+              <li>{t('formatter.indentation')}</li>
+              <li>{t('formatter.sortKeys')}</li>
+              <li>{t('validator.validJson')}</li>
+              <li>{t('common.upload')}</li>
+              <li>{t('editor.preview')}</li>
             </ul>
           </div>
 
@@ -39,9 +42,9 @@ export default function Footer() {
 
           {/* 关于我们 */}
           <div>
-            <h4 className="text-white font-semibold mb-4">About</h4>
-            <p className="mb-4">Professional JSON tools for developers. Free, fast, and secure online JSON formatting and validation services.</p>
-            <p className="text-sm">© 2024 JSON Tools. All rights reserved.</p>
+            <h4 className="text-white font-semibold mb-4">{t('common.about')}</h4>
+            <p className="mb-4">{t('home.description')}</p>
+            <p className="text-sm">{t('footer.rights')}</p>
           </div>
         </div>
 
@@ -51,10 +54,10 @@ export default function Footer() {
             <div className="space-x-4">
               <Link to="/privacy" className="hover:text-blue-400 transition-colors">Privacy Policy</Link>
               <Link to="/terms" className="hover:text-blue-400 transition-colors">Terms of Service</Link>
-              <Link to="/contact" className="hover:text-blue-400 transition-colors">Contact</Link>
+              <Link to="/contact" className="hover:text-blue-400 transition-colors">{t('common.contact')}</Link>
             </div>
             <div className="mt-4 md:mt-0">
-              <p>Built with ❤️ for developers worldwide</p>
+              <p>{t('footer.builtWith')}</p>
             </div>
           </div>
         </div>
