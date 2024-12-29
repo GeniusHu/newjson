@@ -34,7 +34,18 @@ export default defineConfig({
       },
     },
   },
+  
+  // 开发服务器配置
   server: {
-    historyApiFallback: true,
+    port: 3000,
+    strictPort: true,
+    host: true
   },
-})
+
+  // 预览配置
+  preview: {
+    port: 3000,
+    strictPort: true,
+    host: true
+  }
+});
