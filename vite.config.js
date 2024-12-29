@@ -27,6 +27,15 @@ export default defineConfig({
         // 移除 debugger
         drop_debugger: true
       }
-    }
-  }
-})
+    },
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
+  },
+  server: {
+    port: 3000,
+    host: true
+  },
+});
