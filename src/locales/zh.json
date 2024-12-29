@@ -13,7 +13,7 @@
   "home": {
     "title": "JSON 工具集",
     "subtitle": "简单、快速、高效的 JSON 处理工具",
-    "description": "提供格式化、验证、编辑、转换等多种 JSON 处理功能，让您的开发工作更轻松快速。",
+    "description": "提供格式化、验证、编辑、转换等多种 JSON 处理功能，让您的开发工作更轻松。",
     "tryNow": "立即使用"
   },
   "formatter": {
