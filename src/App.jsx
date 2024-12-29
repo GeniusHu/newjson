@@ -9,7 +9,6 @@ import JsonValidator from './components/JsonValidator';
 import JsonEditor from './components/JsonEditor';
 import JsonConverter from './components/JsonConverter';
 import XmlConverter from './components/XmlConverter';
-import Blog from './components/Blog';
 import XmlToJsonGuide from './components/articles/XmlToJsonGuide';
 import NotFound from './components/NotFound';
 import Footer from './components/Footer';
@@ -36,6 +35,7 @@ function AppContent() {
 
   return (
     <div className="min-h-screen flex flex-col">
+        <title>JSON Formatter, Validator, and Editor | 在线JSON格式化、美化、校验与编辑工具</title>
       {/* 导航栏 */}
       <nav className="fixed top-0 w-full bg-black/20 backdrop-blur-lg z-50">
         <div className="container mx-auto px-4 py-4">
@@ -69,7 +69,7 @@ function AppContent() {
               </Link>
               <button
                 onClick={toggleLanguage}
-                className="px-3 py-1 rounded-lg bg-blue-500/20 hover:bg-blue-500/30 
+                className="px-3 py-1 rounded-lg bg-blue-500/20 hover:bg-blue-500/30
                   text-blue-400 transition-colors"
               >
                 {i18n.language === 'zh' ? 'EN' : '中文'}
@@ -132,7 +132,7 @@ function Home() {
               {t('home.description')}
             </p>
             <Link to="/formatter">
-              <button className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-semibold 
+              <button className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-semibold
                 text-white hover:from-blue-600 hover:to-purple-700 transition-all duration-300 shadow-lg">
                 {t('home.tryNow')}
               </button>
@@ -147,7 +147,7 @@ function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* JSON Formatter 卡片 */}
             <Link to="/formatter" className="group">
-              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 transition-all duration-300 
+              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 transition-all duration-300
                 hover:scale-105 border border-white/20">
                 <CodeBracketIcon className="w-12 h-12 text-blue-400 mb-4" />
                 <h3 className="text-xl font-semibold mb-2 text-white">{t('formatter.title')}</h3>
@@ -159,7 +159,7 @@ function Home() {
 
             {/* JSON Validator 卡片 */}
             <Link to="/validator" className="group">
-              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 transition-all duration-300 
+              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 transition-all duration-300
                 hover:scale-105 border border-white/20">
                 <CheckCircleIcon className="w-12 h-12 text-green-400 mb-4" />
                 <h3 className="text-xl font-semibold mb-2 text-white">{t('validator.title')}</h3>
@@ -171,7 +171,7 @@ function Home() {
 
             {/* JSON Editor 卡片 */}
             <Link to="/editor" className="group">
-              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 transition-all duration-300 
+              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 transition-all duration-300
                 hover:scale-105 border border-white/20">
                 <PencilIcon className="w-12 h-12 text-purple-400 mb-4" />
                 <h3 className="text-xl font-semibold mb-2 text-white">{t('editor.title')}</h3>
@@ -183,7 +183,7 @@ function Home() {
 
             {/* JSON Converter 卡片 */}
             <Link to="/converter" className="group">
-              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 transition-all duration-300 
+              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 transition-all duration-300
                 hover:scale-105 border border-white/20">
                 <ArrowsRightLeftIcon className="w-12 h-12 text-yellow-400 mb-4" />
                 <h3 className="text-xl font-semibold mb-2 text-white">{t('converter.title')}</h3>
