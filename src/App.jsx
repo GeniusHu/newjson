@@ -15,16 +15,24 @@ import NotFound from './components/NotFound';
 import Footer from './components/Footer';
 import Breadcrumb from './components/Breadcrumb';
 import LanguageSwitcher from './components/LanguageSwitcher';
+import JsonToYamlGuide from './components/articles/JsonToYamlGuide';
+import BlogList from './components/BlogList';
 
 // 主应用组件
 function AppContent() {
   const location = useLocation();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   // 监听路由变化时跟踪页面访问
   useEffect(() => {
     trackPageView(location.pathname);
   }, [location]);
+
+  // 切换语言
+  const toggleLanguage = () => {
+    const newLang = i18n.language === 'zh' ? 'en' : 'zh';
+    i18n.changeLanguage(newLang);
+  };
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -59,7 +67,13 @@ function AppContent() {
               <Link to="/blog" className="hover:text-blue-400 transition-colors">
                 Blog
               </Link>
-              <LanguageSwitcher />
+              <button
+                onClick={toggleLanguage}
+                className="px-3 py-1 rounded-lg bg-blue-500/20 hover:bg-blue-500/30 
+                  text-blue-400 transition-colors"
+              >
+                {i18n.language === 'zh' ? 'EN' : '中文'}
+              </button>
             </div>
           </div>
         </div>
@@ -79,8 +93,9 @@ function AppContent() {
           <Route path="/editor" element={<JsonEditor />} />
           <Route path="/converter" element={<JsonConverter />} />
           <Route path="/xml" element={<XmlConverter />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/xml-to-json-conversion-guide" element={<XmlToJsonGuide />} />
+          <Route path="/blog" element={<BlogList />} />
+          <Route path="/blog/xml-to-json" element={<XmlToJsonGuide />} />
+          <Route path="/blog/json-yaml" element={<JsonToYamlGuide />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

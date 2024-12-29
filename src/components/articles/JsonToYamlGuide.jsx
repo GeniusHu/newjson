@@ -12,31 +12,31 @@ import {
   ExclamationTriangleIcon
 } from '@heroicons/react/24/outline';
 
-export default function XmlToJsonGuide() {
+export default function JsonToYamlGuide() {
   const { t } = useTranslation();
 
   return (
     <>
       <Helmet>
-        <title>Complete Guide to XML to JSON Conversion | JSON Tools</title>
-        <meta name="description" content="Learn how to convert XML to JSON with our comprehensive guide. Includes best practices, common challenges, and practical examples for developers." />
-        <meta name="keywords" content="xml to json, xml json conversion, xml parser, json converter, data transformation, xml to json converter" />
-        <meta property="og:title" content="Complete Guide to XML to JSON Conversion" />
-        <meta property="og:description" content="Master XML to JSON conversion with detailed examples and best practices. Perfect for developers working with data transformation." />
+        <title>JSON to YAML Conversion Guide | JSON Tools</title>
+        <meta name="description" content="Learn how to convert between JSON and YAML formats with our comprehensive guide. Includes best practices, examples, and common pitfalls to avoid." />
+        <meta name="keywords" content="json to yaml, yaml to json, yaml converter, json converter, data format conversion, configuration files" />
+        <meta property="og:title" content="JSON to YAML Conversion Guide" />
+        <meta property="og:description" content="Master JSON and YAML conversion with detailed examples and best practices. Perfect for developers working with configuration files." />
         <meta property="og:type" content="article" />
         <meta property="article:published_time" content="2024-01-15" />
         <meta property="article:modified_time" content="2024-01-15" />
         <meta property="article:section" content="Technical Guide" />
-        <meta property="article:tag" content="XML,JSON,Data Conversion,Web Development" />
-        <link rel="canonical" href="https://jsontools.com/blog/xml-to-json" />
+        <meta property="article:tag" content="JSON,YAML,Data Conversion,Configuration" />
+        <link rel="canonical" href="https://jsontools.com/blog/json-yaml" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "TechArticle",
-            "headline": "Complete Guide to XML to JSON Conversion",
-            "description": "Learn how to convert XML to JSON with our comprehensive guide. Includes best practices, common challenges, and practical examples for developers.",
-            "keywords": "xml to json, xml json conversion, xml parser, json converter",
-            "articleBody": "A comprehensive guide to converting XML to JSON, covering everything from basic concepts to advanced techniques.",
+            "headline": "JSON to YAML Conversion Guide",
+            "description": "Learn how to convert between JSON and YAML formats with our comprehensive guide. Includes best practices, examples, and common pitfalls to avoid.",
+            "keywords": "json to yaml, yaml to json, yaml converter, json converter",
+            "articleBody": "A comprehensive guide to converting between JSON and YAML formats, covering everything from basic concepts to advanced techniques.",
             "author": {
               "@type": "Organization",
               "name": "JSON Tools"
@@ -62,11 +62,11 @@ export default function XmlToJsonGuide() {
             <div className="text-center mb-12">
               <h1 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text 
                 bg-gradient-to-r from-blue-400 to-purple-500 mb-6">
-                Complete Guide to XML to JSON Conversion
+                JSON to YAML Conversion Guide
               </h1>
               <p className="text-xl text-gray-300 mb-6 max-w-2xl mx-auto">
-                Master the art of converting XML to JSON with our comprehensive guide. Learn best practices,
-                handle common challenges, and implement efficient solutions.
+                Master the art of converting between JSON and YAML formats. Learn when to use each format
+                and how to convert between them efficiently.
               </p>
               <div className="flex items-center justify-center gap-6 text-gray-400 text-sm">
                 <div className="flex items-center gap-2">
@@ -76,7 +76,7 @@ export default function XmlToJsonGuide() {
                 <div className="w-1 h-1 bg-gray-600 rounded-full"></div>
                 <div className="flex items-center gap-2">
                   <ClockIcon className="w-5 h-5" />
-                  <span>12 min read</span>
+                  <span>10 min read</span>
                 </div>
                 <div className="w-1 h-1 bg-gray-600 rounded-full"></div>
                 <div className="flex items-center gap-2">
@@ -95,22 +95,22 @@ export default function XmlToJsonGuide() {
               <ul className="grid md:grid-cols-2 gap-x-6 gap-y-2 text-gray-300">
                 <li>
                   <a href="#introduction" className="hover:text-blue-400 transition-colors">
-                    Introduction to XML and JSON
+                    Introduction to JSON and YAML
                   </a>
                 </li>
                 <li>
                   <a href="#key-differences" className="hover:text-blue-400 transition-colors">
-                    Key Differences
+                    Format Differences
                   </a>
                 </li>
                 <li>
-                  <a href="#conversion-process" className="hover:text-blue-400 transition-colors">
-                    Conversion Process
+                  <a href="#conversion-basics" className="hover:text-blue-400 transition-colors">
+                    Conversion Basics
                   </a>
                 </li>
                 <li>
-                  <a href="#handling-attributes" className="hover:text-blue-400 transition-colors">
-                    Handling XML Attributes
+                  <a href="#advanced-features" className="hover:text-blue-400 transition-colors">
+                    Advanced Features
                   </a>
                 </li>
                 <li>
@@ -119,8 +119,8 @@ export default function XmlToJsonGuide() {
                   </a>
                 </li>
                 <li>
-                  <a href="#common-challenges" className="hover:text-blue-400 transition-colors">
-                    Common Challenges
+                  <a href="#common-issues" className="hover:text-blue-400 transition-colors">
+                    Common Issues
                   </a>
                 </li>
               </ul>
@@ -133,7 +133,7 @@ export default function XmlToJsonGuide() {
               {/* Tool Cards */}
               <div className="grid md:grid-cols-2 gap-6 mb-12">
                 <Link 
-                  to="/xml"
+                  to="/converter"
                   className="block group bg-black/20 backdrop-blur-lg rounded-xl p-8 border 
                     border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 
                     hover:scale-[1.02]"
@@ -146,17 +146,17 @@ export default function XmlToJsonGuide() {
                     <div>
                       <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-blue-400 
                         transition-colors">
-                        XML to JSON Converter
+                        JSON to YAML Converter
                       </h3>
                       <p className="text-gray-400">
-                        Try our free online XML to JSON converter. Fast, accurate, and easy to use.
+                        Try our free online JSON to YAML converter. Fast, accurate, and easy to use.
                       </p>
                     </div>
                   </div>
                 </Link>
 
                 <Link 
-                  to="/converter"
+                  to="/xml"
                   className="block group bg-black/20 backdrop-blur-lg rounded-xl p-8 border 
                     border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 
                     hover:scale-[1.02]"
@@ -169,10 +169,10 @@ export default function XmlToJsonGuide() {
                     <div>
                       <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-purple-400 
                         transition-colors">
-                        JSON to YAML Converter
+                        XML Converter
                       </h3>
                       <p className="text-gray-400">
-                        Need to convert JSON to YAML? Try our other conversion tool.
+                        Need to work with XML? Try our XML to JSON converter.
                       </p>
                     </div>
                   </div>
@@ -183,12 +183,12 @@ export default function XmlToJsonGuide() {
               <section id="introduction">
                 <h2 className="flex items-center gap-3 text-transparent bg-clip-text 
                   bg-gradient-to-r from-blue-400 to-purple-500">
-                  Introduction to XML and JSON
+                  Introduction to JSON and YAML
                 </h2>
                 <p>
-                  XML (eXtensible Markup Language) and JSON (JavaScript Object Notation) are two of the most widely used
-                  data formats in web development and system integration. While XML has been a standard for decades,
-                  JSON has gained massive popularity due to its simplicity and native JavaScript support.
+                  JSON (JavaScript Object Notation) and YAML (YAML Ain't Markup Language) are two popular
+                  data serialization formats. While JSON is widely used for APIs and data exchange, YAML
+                  is often preferred for configuration files due to its human-readable format.
                 </p>
               </section>
 
@@ -196,125 +196,130 @@ export default function XmlToJsonGuide() {
               <section id="key-differences" className="mt-12">
                 <h2 className="flex items-center gap-3 text-transparent bg-clip-text 
                   bg-gradient-to-r from-blue-400 to-purple-500">
-                  Key Differences
+                  Format Differences
                 </h2>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="bg-black/20 rounded-lg p-6">
-                    <h3 className="text-lg font-semibold text-white mb-4">XML Characteristics</h3>
+                    <h3 className="text-lg font-semibold text-white mb-4">JSON Format</h3>
                     <ul className="space-y-2">
                       <li className="flex items-center gap-2">
                         <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                        Tag-based structure with attributes
+                        Uses braces and brackets
                       </li>
                       <li className="flex items-center gap-2">
                         <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                        Supports metadata through attributes
+                        Requires quotes around strings
                       </li>
                       <li className="flex items-center gap-2">
                         <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                        Allows comments and processing instructions
+                        No comments supported
                       </li>
                     </ul>
                   </div>
                   <div className="bg-black/20 rounded-lg p-6">
-                    <h3 className="text-lg font-semibold text-white mb-4">JSON Characteristics</h3>
+                    <h3 className="text-lg font-semibold text-white mb-4">YAML Format</h3>
                     <ul className="space-y-2">
                       <li className="flex items-center gap-2">
                         <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
-                        Key-value pair structure
+                        Uses indentation for structure
                       </li>
                       <li className="flex items-center gap-2">
                         <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
-                        Native JavaScript support
+                        Optional quotes for strings
                       </li>
                       <li className="flex items-center gap-2">
                         <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
-                        Lightweight and easy to read
+                        Supports comments and anchors
                       </li>
                     </ul>
                   </div>
                 </div>
               </section>
 
-              {/* Conversion Process Section */}
-              <section id="conversion-process" className="mt-12">
+              {/* Conversion Basics Section */}
+              <section id="conversion-basics" className="mt-12">
                 <h2 className="flex items-center gap-3 text-transparent bg-clip-text 
                   bg-gradient-to-r from-blue-400 to-purple-500">
-                  Conversion Process
+                  Conversion Basics
                 </h2>
                 <p>
-                  Converting XML to JSON involves several key steps and considerations. Here's a practical example:
+                  Converting between JSON and YAML is straightforward in most cases. Here's a simple example:
                 </p>
                 <div className="grid md:grid-cols-2 gap-6 mt-6">
                   <div className="bg-black/30 rounded-lg overflow-hidden">
                     <div className="bg-blue-500/20 px-4 py-2 border-b border-blue-500/40">
-                      <p className="text-blue-400 font-mono font-semibold">XML Input</p>
-                    </div>
-                    <pre className="p-4 text-sm overflow-x-auto">
-                      <code>{`<person id="123">
-  <name>John Doe</name>
-  <age>30</age>
-  <contact>
-    <email>john@example.com</email>
-    <phone>+1-555-555-0123</phone>
-  </contact>
-</person>`}</code>
-                    </pre>
-                  </div>
-                  <div className="bg-black/30 rounded-lg overflow-hidden">
-                    <div className="bg-purple-500/20 px-4 py-2 border-b border-purple-500/40">
-                      <p className="text-purple-400 font-mono font-semibold">JSON Output</p>
+                      <p className="text-blue-400 font-mono font-semibold">JSON Input</p>
                     </div>
                     <pre className="p-4 text-sm overflow-x-auto">
                       <code>{`{
-  "person": {
-    "@id": "123",
-    "name": "John Doe",
-    "age": "30",
-    "contact": {
-      "email": "john@example.com",
-      "phone": "+1-555-555-0123"
+  "config": {
+    "name": "My App",
+    "version": "1.0.0",
+    "settings": {
+      "debug": true,
+      "api": {
+        "url": "https://api.example.com",
+        "key": "abc123"
+      }
     }
   }
 }`}</code>
                     </pre>
                   </div>
+                  <div className="bg-black/30 rounded-lg overflow-hidden">
+                    <div className="bg-purple-500/20 px-4 py-2 border-b border-purple-500/40">
+                      <p className="text-purple-400 font-mono font-semibold">YAML Output</p>
+                    </div>
+                    <pre className="p-4 text-sm overflow-x-auto">
+                      <code>{`config:
+  name: My App
+  version: 1.0.0
+  settings:
+    debug: true
+    api:
+      url: https://api.example.com
+      key: abc123`}</code>
+                    </pre>
+                  </div>
                 </div>
               </section>
 
-              {/* Handling Attributes Section */}
-              <section id="handling-attributes" className="mt-12">
+              {/* Advanced Features Section */}
+              <section id="advanced-features" className="mt-12">
                 <h2 className="flex items-center gap-3 text-transparent bg-clip-text 
                   bg-gradient-to-r from-blue-400 to-purple-500">
-                  Handling XML Attributes
+                  Advanced Features
                 </h2>
-                <div className="bg-black/20 rounded-lg p-6">
-                  <ul className="space-y-4">
-                    <li className="flex items-start gap-3">
-                      <span className="w-6 h-6 bg-blue-500/20 rounded-full flex items-center justify-center 
-                        text-blue-400 font-semibold">1</span>
-                      <div>
-                        <h4 className="font-semibold text-white">Prefix Convention</h4>
-                        <p className="text-gray-300">Use @ prefix for XML attributes in JSON</p>
-                      </div>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="w-6 h-6 bg-blue-500/20 rounded-full flex items-center justify-center 
-                        text-blue-400 font-semibold">2</span>
-                      <div>
-                        <h4 className="font-semibold text-white">Nested Elements</h4>
-                        <p className="text-gray-300">Convert nested elements to nested objects</p>
-                      </div>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="w-6 h-6 bg-blue-500/20 rounded-full flex items-center justify-center 
-                        text-blue-400 font-semibold">3</span>
-                      <div>
-                        <h4 className="font-semibold text-white">Array Handling</h4>
-                        <p className="text-gray-300">Convert repeated elements to arrays</p>
-                      </div>
-                    </li>
-                  </ul>
+                <div className="space-y-6">
+                  <div className="bg-black/20 rounded-lg p-6">
+                    <h3 className="text-lg font-semibold text-white mb-4">YAML-Specific Features</h3>
+                    <ul className="space-y-4">
+                      <li className="flex items-start gap-3">
+                        <span className="w-6 h-6 bg-purple-500/20 rounded-full flex items-center justify-center 
+                          text-purple-400 font-semibold">1</span>
+                        <div>
+                          <h4 className="font-semibold text-white">Anchors and Aliases</h4>
+                          <p className="text-gray-300">Reuse configuration blocks with YAML anchors</p>
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="w-6 h-6 bg-purple-500/20 rounded-full flex items-center justify-center 
+                          text-purple-400 font-semibold">2</span>
+                        <div>
+                          <h4 className="font-semibold text-white">Multi-line Strings</h4>
+                          <p className="text-gray-300">Handle long text with various YAML string styles</p>
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="w-6 h-6 bg-purple-500/20 rounded-full flex items-center justify-center 
+                          text-purple-400 font-semibold">3</span>
+                        <div>
+                          <h4 className="font-semibold text-white">Comments</h4>
+                          <p className="text-gray-300">Add explanatory comments to configuration</p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </section>
 
@@ -326,47 +331,47 @@ export default function XmlToJsonGuide() {
                 </h2>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="bg-black/20 rounded-lg p-6">
-                    <h3 className="text-lg font-semibold text-white mb-4">Input Handling</h3>
+                    <h3 className="text-lg font-semibold text-white mb-4">When Converting to YAML</h3>
                     <ul className="space-y-2">
                       <li className="flex items-center gap-2">
                         <CheckCircleIcon className="w-5 h-5 text-green-400" />
-                        <span>Validate XML before conversion</span>
+                        <span>Use consistent indentation</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <CheckCircleIcon className="w-5 h-5 text-green-400" />
-                        <span>Handle character encoding properly</span>
+                        <span>Add meaningful comments</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <CheckCircleIcon className="w-5 h-5 text-green-400" />
-                        <span>Preserve data types when possible</span>
+                        <span>Utilize YAML's advanced features</span>
                       </li>
                     </ul>
                   </div>
                   <div className="bg-black/20 rounded-lg p-6">
-                    <h3 className="text-lg font-semibold text-white mb-4">Error Handling</h3>
+                    <h3 className="text-lg font-semibold text-white mb-4">When Converting to JSON</h3>
                     <ul className="space-y-2">
                       <li className="flex items-center gap-2">
                         <CheckCircleIcon className="w-5 h-5 text-green-400" />
-                        <span>Implement proper error handling</span>
+                        <span>Validate JSON structure</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <CheckCircleIcon className="w-5 h-5 text-green-400" />
-                        <span>Provide meaningful error messages</span>
+                        <span>Handle special characters</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <CheckCircleIcon className="w-5 h-5 text-green-400" />
-                        <span>Log conversion failures for debugging</span>
+                        <span>Maintain data types</span>
                       </li>
                     </ul>
                   </div>
                 </div>
               </section>
 
-              {/* Common Challenges Section */}
-              <section id="common-challenges" className="mt-12">
+              {/* Common Issues Section */}
+              <section id="common-issues" className="mt-12">
                 <h2 className="flex items-center gap-3 text-transparent bg-clip-text 
                   bg-gradient-to-r from-blue-400 to-purple-500 mb-6">
-                  Common Challenges
+                  Common Issues
                 </h2>
                 <div className="grid gap-6">
                   <div className="bg-black/20 backdrop-blur-lg rounded-lg p-6">
@@ -375,10 +380,10 @@ export default function XmlToJsonGuide() {
                         <ExclamationTriangleIcon className="w-6 h-6 text-yellow-400" />
                       </div>
                       <div>
-                        <h4 className="text-lg font-semibold text-white mb-2">Mixed Content</h4>
+                        <h4 className="text-lg font-semibold text-white mb-2">Indentation Errors</h4>
                         <p className="text-gray-300">
-                          Handling elements that contain both text and child elements requires special attention.
-                          Use a consistent approach to preserve both the text content and the structure.
+                          YAML is sensitive to indentation. Always use consistent spacing and avoid mixing
+                          tabs with spaces. Most tools use 2 spaces for indentation by default.
                         </p>
                       </div>
                     </div>
@@ -390,10 +395,10 @@ export default function XmlToJsonGuide() {
                         <ExclamationTriangleIcon className="w-6 h-6 text-yellow-400" />
                       </div>
                       <div>
-                        <h4 className="text-lg font-semibold text-white mb-2">Namespace Handling</h4>
+                        <h4 className="text-lg font-semibold text-white mb-2">Special Characters</h4>
                         <p className="text-gray-300">
-                          XML namespaces need to be properly handled during conversion. Consider using
-                          prefixes or full URIs in the JSON representation to maintain namespace information.
+                          Special characters in both formats need proper escaping. Pay special attention to
+                          quotes, colons, and multi-line strings to ensure they are properly formatted.
                         </p>
                       </div>
                     </div>
@@ -405,10 +410,10 @@ export default function XmlToJsonGuide() {
                         <ExclamationTriangleIcon className="w-6 h-6 text-yellow-400" />
                       </div>
                       <div>
-                        <h4 className="text-lg font-semibold text-white mb-2">Large File Processing</h4>
+                        <h4 className="text-lg font-semibold text-white mb-2">Data Type Preservation</h4>
                         <p className="text-gray-300">
-                          Converting large XML files requires efficient streaming approaches. Implement
-                          chunked processing and memory management to handle files of any size.
+                          Maintain proper data types during conversion. Be especially careful with numbers,
+                          booleans, and null values to ensure they are correctly represented in both formats.
                         </p>
                       </div>
                     </div>
@@ -419,17 +424,17 @@ export default function XmlToJsonGuide() {
               {/* Call to Action */}
               <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 border 
                 border-blue-500/40 rounded-lg p-12 mt-16 text-center">
-                <h2 className="text-3xl font-bold text-white mb-4">Ready to Convert Your XML?</h2>
+                <h2 className="text-3xl font-bold text-white mb-4">Ready to Convert?</h2>
                 <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                  Try our free online XML to JSON converter tool. It's fast, secure, and easy to use.
+                  Try our free online JSON to YAML converter tool. It's fast, secure, and easy to use.
                 </p>
                 <Link
-                  to="/xml"
+                  to="/converter"
                   className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-500 
                     to-purple-600 rounded-lg font-semibold text-white hover:from-blue-600 
                     hover:to-purple-700 transition-all duration-300 shadow-lg group"
                 >
-                  Try XML Converter
+                  Try JSON-YAML Converter
                   <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>

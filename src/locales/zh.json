@@ -4,11 +4,11 @@
     "validate": "验证",
     "edit": "编辑",
     "convert": "转换",
-    "copy": "复制",
-    "clear": "清除",
-    "upload": "上传",
-    "error": "错误",
-    "success": "成功"
+    "readMore": "阅读全文",
+    "tryTool": "使用工具",
+    "readTime": "分钟阅读",
+    "tutorial": "技术教程",
+    "tableOfContents": "目录"
   },
   "home": {
     "title": "JSON 工具集",
@@ -45,5 +45,122 @@
     "jsonToXml": "JSON → XML",
     "invalidXml": "无效的 XML 格式",
     "invalidJson": "无效的 JSON 格式"
+  },
+  "blog": {
+    "title": "技术博客",
+    "subtitle": "探索数据格式转换的最佳实践和技术指南",
+    "xmlToJson": {
+      "title": "XML 转 JSON 完整指南",
+      "description": "学习如何在 XML 和 JSON 格式之间进行转换。包含详细示例、最佳实践和免费在线转换工具。",
+      "toolName": "XML 转换工具",
+      "sections": {
+        "understanding": "认识 XML 和 JSON",
+        "differences": "格式对比",
+        "converting": "XML 转 JSON",
+        "examples": "转换示例",
+        "practices": "最佳实践",
+        "challenges": "常见问题"
+      },
+      "content": {
+        "intro": "XML（可扩展标记语言）和 JSON（JavaScript 对象表示法）是两种流行的数据存储和交换格式。XML 历史更悠久且更为详细，而 JSON 因其简洁性和 JavaScript 原生支持而广受欢迎。",
+        "tryTool": "想要立即转换 XML 到 JSON？试试我们的免费在线转换工具！",
+        "tryButton": "使用 XML 转换器",
+        "readyTitle": "准备开始转换？",
+        "readyDesc": "立即使用我们的转换工具 - 免费、快速、易用，无需注册！",
+        "startButton": "开始转换",
+        "features": {
+          "attributes": {
+            "title": "XML 属性处理",
+            "description": "XML 属性在 JSON 输出中使用 @ 前缀以区分子元素"
+          },
+          "arrays": {
+            "title": "数组检测",
+            "description": "重复的元素会自动转换为 JSON 数组"
+          },
+          "mixed": {
+            "title": "混合内容",
+            "description": "使用特殊标记保留混合的文本内容"
+          }
+        },
+        "practices": {
+          "input": {
+            "title": "输入处理",
+            "items": {
+              "validate": "始终验证 XML 输入",
+              "arrays": "统一处理数组",
+              "types": "保持数据类型"
+            }
+          },
+          "implementation": {
+            "title": "实现建议",
+            "items": {
+              "libraries": "使用可靠的库",
+              "testing": "测试各种结构",
+              "errors": "优雅处理错误"
+            }
+          }
+        },
+        "convertingIntro": "将 XML 转换为 JSON 时，需要注意以下几点：",
+        "features": {
+          "xml": {
+            "title": "XML 特点",
+            "items": {
+              "tags": "使用标签和属性",
+              "verbose": "更详细的语法",
+              "comments": "支持注释"
+            }
+          },
+          "json": {
+            "title": "JSON 特点",
+            "items": {
+              "pairs": "使用键值对",
+              "lightweight": "轻量级语法",
+              "native": "JavaScript 原生支持"
+            }
+          }
+        },
+        "exampleIntro": "这是一个简单的 XML 转 JSON 示例：",
+        "examples": {
+          "xmlExample": "<person id=\"123\">\n  <name>John Doe</name>\n  <age>30</age>\n  <emails>\n    <email>john@example.com</email>\n    <email>doe@example.com</email>\n  </emails>\n</person>",
+          "jsonExample": "{\n  \"person\": {\n    \"@id\": \"123\",\n    \"name\": \"John Doe\",\n    \"age\": \"30\",\n    \"emails\": {\n      \"email\": [\n        \"john@example.com\",\n        \"doe@example.com\"\n      ]\n    }\n  }\n}"
+        }
+      }
+    },
+    "jsonToYaml": {
+      "title": "JSON 和 YAML 互转指南",
+      "description": "掌握 JSON 和 YAML 格式转换的完整指南，包含实用示例和最佳实践。了解如何高效地在这两种流行的数据格式之间进行转换。",
+      "toolName": "JSON-YAML 转换工具",
+      "sections": {
+        "understanding": "认识 JSON 和 YAML",
+        "differences": "格式对比",
+        "examples": "转换示例"
+      },
+      "content": {
+        "intro": "JSON (JavaScript Object Notation) 和 YAML (YAML Ain't Markup Language) 是两种流行的数据序列化格式。JSON 以其简洁的语法和广泛的语言支持而闻名，而 YAML 则以其更好的可读性和更灵活的语法特性受到欢迎。",
+        "features": {
+          "json": {
+            "title": "JSON 特点",
+            "items": {
+              "pairs": "简洁的语法结构",
+              "lightweight": "广泛的语言支持",
+              "native": "严格的数据类型"
+            }
+          },
+          "yaml": {
+            "title": "YAML 特点",
+            "items": {
+              "indentation": "更好的可读性",
+              "comments": "支持注释功能",
+              "readable": "更灵活的语法"
+            }
+          }
+        },
+        "exampleIntro": "这是一个简单的 JSON 转 YAML 示例：",
+        "examples": {
+          "jsonExample": "{\n  \"person\": {\n    \"name\": \"John Doe\",\n    \"age\": 30,\n    \"email\": \"john@example.com\",\n    \"address\": {\n      \"street\": \"123 Main St\",\n      \"city\": \"Anytown\",\n      \"country\": \"USA\"\n    }\n  }\n}",
+          "yamlExample": "person:\n  name: John Doe\n  age: 30\n  email: john@example.com\n  address:\n    street: 123 Main St\n    city: Anytown\n    country: USA"
+        }
+      }
+    }
   }
 } 
