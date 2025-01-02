@@ -16,6 +16,10 @@ import Breadcrumb from './components/Breadcrumb';
 import LanguageSwitcher from './components/LanguageSwitcher';
 import JsonToYamlGuide from './components/articles/JsonToYamlGuide';
 import BlogList from './components/BlogList';
+import JsoncGuide from './components/articles/JsoncGuide';
+import JsonEscapeGuide from './components/articles/JsonEscapeGuide';
+import JsonCompressionGuide from './components/articles/JsonCompressionGuide';
+import JsonStringConversionGuide from './components/articles/JsonStringConversionGuide';
 
 // 主应用组件
 function AppContent() {
@@ -96,6 +100,10 @@ function AppContent() {
           <Route path="/blog" element={<BlogList />} />
           <Route path="/blog/xml-to-json" element={<XmlToJsonGuide />} />
           <Route path="/blog/json-yaml" element={<JsonToYamlGuide />} />
+          <Route path="/blog/jsonc-guide" element={<JsoncGuide />} />
+          <Route path="/blog/json-escape-guide" element={<JsonEscapeGuide />} />
+          <Route path="/blog/json-compression-guide" element={<JsonCompressionGuide />} />
+          <Route path="/blog/json-string-conversion" element={<JsonStringConversionGuide />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

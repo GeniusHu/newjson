@@ -54,5 +54,19 @@
   "footer": {
     "rights": "© 2024 JSON Tools. All rights reserved.",
     "builtWith": "Built with ❤️ for developers worldwide"
+  },
+  "blog": {
+    "jsoncGuide": {
+      "title": "How to Handle JSON with Comments (JSONC)",
+      "description": "Learn how to handle JSON with comments, including parsing methods and common issues."
+    },
+    "jsonEscapeGuide": {
+      "title": "Complete Guide to JSON Escaping and Unescaping",
+      "description": "Understand JSON escaping and unescaping, common characters, and handling in different languages."
+    },
+    "jsonCompressionGuide": {
+      "title": "Best Practices for JSON Compression and Beautification",
+      "description": "Explore the importance of JSON compression and beautification, tools, and implementation methods."
+    }
   }
 } 

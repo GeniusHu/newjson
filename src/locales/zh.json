@@ -161,6 +161,10 @@
           "yamlExample": "person:\n  name: John Doe\n  age: 30\n  email: john@example.com\n  address:\n    street: 123 Main St\n    city: Anytown\n    country: USA"
         }
       }
+    },
+    "jsonStringConversion": {
+      "title": "如何将字符串转换为 JSON：完整指南",
+      "description": "学习如何在 JavaScript、Python 和 Java 中将 JSON 字符串转换为可用对象。包含示例、错误处理技巧和最佳实践的分步指南，适合初学者和专家。"
     }
   }
 } 

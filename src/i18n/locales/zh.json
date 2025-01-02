@@ -54,5 +54,19 @@
   "footer": {
     "rights": "© 2024 JSON Tools. 保留所有权利。",
     "builtWith": "用 ❤️ 为全球开发者精心打造"
+  },
+  "blog": {
+    "jsoncGuide": {
+      "title": "如何处理带注释的 JSON (JSONC)",
+      "description": "了解如何处理带注释的 JSON，包括解析方法和常见问题。"
+    },
+    "jsonEscapeGuide": {
+      "title": "JSON 转义和反转义完全指南",
+      "description": "了解 JSON 转义和反转义，常见字符，以及在不同语言中的处理方法。"
+    },
+    "jsonCompressionGuide": {
+      "title": "JSON 压缩和美化最佳实践",
+      "description": "探索 JSON 压缩和美化的重要性、工具和实现方法。"
+    }
   }
 } 

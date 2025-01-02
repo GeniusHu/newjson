@@ -161,6 +161,10 @@
           "yamlExample": "person:\n  name: John Doe\n  age: 30\n  email: john@example.com\n  address:\n    street: 123 Main St\n    city: Anytown\n    country: USA"
         }
       }
+    },
+    "jsonStringConversion": {
+      "title": "How to Convert JSON from String: A Comprehensive Guide",
+      "description": "Learn how to convert JSON strings into usable objects in JavaScript, Python, and Java. A step-by-step guide with examples, error handling tips, and best practices for beginners and experts."
     }
   }
 } 
