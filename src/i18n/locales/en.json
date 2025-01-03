@@ -1,61 +1,32 @@
 {
   "common": {
-    "tools": "Tools",
-    "features": "Features",
-    "about": "About",
-    "contact": "Contact",
-    "copy": "Copy",
-    "upload": "Upload",
-    "clear": "Clear",
     "format": "Format",
     "validate": "Validate",
-    "convert": "Convert",
     "edit": "Edit",
-    "success": "Success",
-    "error": "Error",
-    "copied": "Copied to clipboard!",
-    "dropFile": "Drop JSON file here"
+    "convert": "Convert",
+    "readMore": "Read More",
+    "tryTool": "Try Tool",
+    "readTime": "min read",
+    "tutorial": "Tutorial",
+    "tableOfContents": "Table of Contents"
   },
   "home": {
-    "title": "Professional JSON Tools",
-    "subtitle": "Format, Validate, and Edit JSON Online",
-    "description": "Free online JSON tools for developers. Format JSON with custom indentation, validate JSON syntax, and edit JSON with real-time preview. Simple, fast, and secure.",
-    "tryNow": "Try JSON Formatter Now"
-  },
-  "formatter": {
-    "title": "JSON Formatter",
-    "description": "Paste your JSON below and click format to beautify it.",
-    "indentation": "Spaces",
-    "sortKeys": "Sort Keys",
-    "compress": "Compress",
-    "expand": "Expand",
-    "input": "Input",
-    "output": "Output"
-  },
-  "validator": {
-    "title": "JSON Validator",
-    "description": "Validate your JSON and get detailed error messages.",
-    "validJson": "Valid JSON",
-    "invalidJson": "Invalid JSON"
-  },
-  "converter": {
-    "title": "JSON Format Converter",
-    "description": "Convert JSON to various formats including XML, YAML, and programming language classes",
-    "selectFormat": "Select Format",
-    "jsonInput": "JSON Input",
-    "formatOutput": "{{format}} Output"
-  },
-  "editor": {
-    "title": "JSON Editor",
-    "description": "Edit your JSON with real-time preview and validation.",
-    "editor": "Editor",
-    "preview": "Preview"
-  },
-  "footer": {
-    "rights": "© 2024 JSON Tools. All rights reserved.",
-    "builtWith": "Built with ❤️ for developers worldwide"
+    "title": "JSON Tools",
+    "subtitle": "Simple, Fast, and Efficient JSON Processing Tools",
+    "description": "Provides formatting, validation, editing, conversion, and more JSON processing features to make your development work easier.",
+    "tryNow": "Try Now"
   },
   "blog": {
+    "title": "Technical Blog",
+    "subtitle": "Explore best practices and technical guides for data format conversion",
+    "xmlToJson": {
+      "title": "XML to JSON Conversion Guide",
+      "description": "Learn how to convert between XML and JSON formats with detailed examples, best practices, and a free online converter tool."
+    },
+    "jsonToYaml": {
+      "title": "JSON and YAML Conversion Guide",
+      "description": "Master the complete guide to converting between JSON and YAML formats, including practical examples and best practices."
+    },
     "jsoncGuide": {
       "title": "How to Handle JSON with Comments (JSONC)",
       "description": "Learn how to handle JSON with comments, including parsing methods and common issues."
@@ -67,6 +38,14 @@
     "jsonCompressionGuide": {
       "title": "Best Practices for JSON Compression and Beautification",
       "description": "Explore the importance of JSON compression and beautification, tools, and implementation methods."
+    },
+    "jsonStringConversion": {
+      "title": "How to Convert JSON from String: A Comprehensive Guide",
+      "description": "Learn how to convert JSON strings into usable objects in JavaScript, Python, and Java. A step-by-step guide with examples, error handling tips, and best practices for beginners and experts."
+    },
+    "jsonHttpExtract": {
+      "title": "How to Perform HTTP Extract from JSON: A Step-by-Step Guide",
+      "description": "Learn how to perform HTTP extract from JSON with step-by-step examples in Python, JavaScript, and Java. Extract data from APIs efficiently and securely."
     }
   }
 } 

@@ -5,6 +5,7 @@ import JsoncGuide from './articles/JsoncGuide';
 import JsonEscapeGuide from './articles/JsonEscapeGuide';
 import JsonCompressionGuide from './articles/JsonCompressionGuide';
 import JsonStringConversionGuide from './articles/JsonStringConversionGuide';
+import JsonHttpExtractGuide from './articles/JsonHttpExtractGuide';
 
 export default function BlogList() {
   const { t } = useTranslation();
@@ -23,6 +24,42 @@ export default function BlogList() {
         </div>
 
         <div className="grid gap-8">
+          {/* JSON HTTP Extract Guide */}
+          <Link 
+            to="/blog/json-http-extract"
+            className="block group bg-white/10 backdrop-blur-lg rounded-xl overflow-hidden border 
+              border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 
+              hover:scale-[1.02]"
+          >
+            <div className="flex items-start gap-8 p-8">
+              <div className="flex-1">
+                <h2 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 
+                  transition-colors">
+                  {t('blog.jsonHttpExtract.title')}
+                </h2>
+                <p className="text-gray-300 mb-6">
+                  {t('blog.jsonHttpExtract.description')}
+                </p>
+                <div className="flex items-center gap-6 text-gray-400 text-sm">
+                  <div className="flex items-center gap-2">
+                    <CalendarIcon className="w-5 h-5" />
+                    <time dateTime="2024-01-15">January 15, 2024</time>
+                  </div>
+                  <div className="w-1 h-1 bg-gray-600 rounded-full"></div>
+                  <div className="flex items-center gap-2">
+                    <ClockIcon className="w-5 h-5" />
+                    <span>12 min read</span>
+                  </div>
+                </div>
+              </div>
+              <div className="shrink-0 w-48 h-32 bg-gradient-to-br from-blue-500/20 to-purple-500/20 
+                rounded-lg flex items-center justify-center text-2xl font-mono text-cyan-400 
+                group-hover:from-blue-500/30 group-hover:to-purple-500/30 transition-all">
+                HTTP → JSON
+              </div>
+            </div>
+          </Link>
+
           {/* JSON String Conversion Guide */}
           <Link 
             to="/blog/json-string-conversion"

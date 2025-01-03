@@ -20,6 +20,7 @@ import JsoncGuide from './components/articles/JsoncGuide';
 import JsonEscapeGuide from './components/articles/JsonEscapeGuide';
 import JsonCompressionGuide from './components/articles/JsonCompressionGuide';
 import JsonStringConversionGuide from './components/articles/JsonStringConversionGuide';
+import JsonHttpExtractGuide from './components/articles/JsonHttpExtractGuide';
 
 // 主应用组件
 function AppContent() {
@@ -104,6 +105,7 @@ function AppContent() {
           <Route path="/blog/json-escape-guide" element={<JsonEscapeGuide />} />
           <Route path="/blog/json-compression-guide" element={<JsonCompressionGuide />} />
           <Route path="/blog/json-string-conversion" element={<JsonStringConversionGuide />} />
+          <Route path="/blog/json-http-extract" element={<JsonHttpExtractGuide />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

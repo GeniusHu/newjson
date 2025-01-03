@@ -1,61 +1,32 @@
 {
   "common": {
-    "tools": "工具",
-    "features": "功能",
-    "about": "关于",
-    "contact": "联系我们",
-    "copy": "复制",
-    "upload": "上传",
-    "clear": "清除",
     "format": "格式化",
     "validate": "验证",
-    "convert": "转换",
     "edit": "编辑",
-    "success": "成功",
-    "error": "错误",
-    "copied": "已复制到剪贴板！",
-    "dropFile": "将 JSON 文件拖放到此处"
+    "convert": "转换",
+    "readMore": "阅读全文",
+    "tryTool": "使用工具",
+    "readTime": "分钟阅读",
+    "tutorial": "技术教程",
+    "tableOfContents": "目录"
   },
   "home": {
-    "title": "专业的 JSON 工具",
-    "subtitle": "在线格式化、验证和编辑 JSON",
-    "description": "为开发者提供免费的在线 JSON 工具。使用自定义缩进格式化 JSON，验证 JSON 语法，并通过实时预览编辑 JSON。简单、快速、安全。",
-    "tryNow": "立即试用 JSON 格式化工具"
-  },
-  "formatter": {
-    "title": "JSON 格式化工具",
-    "description": "在下方粘贴您的 JSON，然后点击格式化按钮美化它。",
-    "indentation": "空格",
-    "sortKeys": "排序键值",
-    "compress": "压缩",
-    "expand": "展开",
-    "input": "输入",
-    "output": "输出"
-  },
-  "validator": {
-    "title": "JSON 验证工具",
-    "description": "验证您的 JSON 并获取详细的错误信息。",
-    "validJson": "有效的 JSON",
-    "invalidJson": "无效的 JSON"
-  },
-  "converter": {
-    "title": "JSON 格式转换器",
-    "description": "将 JSON 转换为各种格式，包括 XML、YAML 和编程语言类",
-    "selectFormat": "选择格式",
-    "jsonInput": "JSON 输入",
-    "formatOutput": "{{format}} 输出"
-  },
-  "editor": {
-    "title": "JSON 编辑器",
-    "description": "使用实时预览和验证功能编辑您的 JSON。",
-    "editor": "编辑器",
-    "preview": "预览"
-  },
-  "footer": {
-    "rights": "© 2024 JSON Tools. 保留所有权利。",
-    "builtWith": "用 ❤️ 为全球开发者精心打造"
+    "title": "JSON 工具集",
+    "subtitle": "简单、快速、高效的 JSON 处理工具",
+    "description": "提供格式化、验证、编辑、转换等多种 JSON 处理功能，让您的开发工作更轻松。",
+    "tryNow": "立即使用"
   },
   "blog": {
+    "title": "技术博客",
+    "subtitle": "探索数据格式转换的最佳实践和技术指南",
+    "xmlToJson": {
+      "title": "XML 转 JSON 完整指南",
+      "description": "学习如何在 XML 和 JSON 格式之间进行转换。包含详细示例、最佳实践和免费在线转换工具。"
+    },
+    "jsonToYaml": {
+      "title": "JSON 和 YAML 互转指南",
+      "description": "掌握 JSON 和 YAML 格式转换的完整指南，包含实用示例和最佳实践。"
+    },
     "jsoncGuide": {
       "title": "如何处理带注释的 JSON (JSONC)",
       "description": "了解如何处理带注释的 JSON，包括解析方法和常见问题。"
@@ -67,6 +38,14 @@
     "jsonCompressionGuide": {
       "title": "JSON 压缩和美化最佳实践",
       "description": "探索 JSON 压缩和美化的重要性、工具和实现方法。"
+    },
+    "jsonStringConversion": {
+      "title": "如何将字符串转换为 JSON：完整指南",
+      "description": "学习如何在 JavaScript、Python 和 Java 中将 JSON 字符串转换为可用对象。包含示例、错误处理技巧和最佳实践的分步指南，适合初学者和专家。"
+    },
+    "jsonHttpExtract": {
+      "title": "如何从 JSON 中提取 HTTP 数据：分步指南",
+      "description": "通过 Python、JavaScript 和 Java 的分步示例，学习如何从 JSON 中高效安全地提取 HTTP 数据。从 API 中提取数据的完整指南。"
     }
   }
 } 

@@ -51,120 +51,31 @@
     "subtitle": "Explore best practices and technical guides for data format conversion",
     "xmlToJson": {
       "title": "XML to JSON Conversion Guide",
-      "description": "Learn how to convert between XML and JSON formats with detailed examples, best practices, and a free online converter tool.",
-      "toolName": "XML Converter Tool",
-      "sections": {
-        "understanding": "Understanding XML and JSON",
-        "differences": "Key Differences",
-        "converting": "Converting XML to JSON",
-        "examples": "Example Conversion",
-        "practices": "Best Practices",
-        "challenges": "Common Challenges"
-      },
-      "content": {
-        "intro": "XML (eXtensible Markup Language) and JSON (JavaScript Object Notation) are two popular data formats used for storing and exchanging data. While XML has been around longer and is more verbose, JSON has gained popularity due to its simplicity and native support in JavaScript.",
-        "tryTool": "Want to convert your XML to JSON right now? Use our free online converter tool!",
-        "tryButton": "Try XML Converter",
-        "readyTitle": "Ready to Convert?",
-        "readyDesc": "Try our XML converter tool now - it's free, fast, and easy to use. No registration required!",
-        "startButton": "Go to XML Converter",
-        "features": {
-          "attributes": {
-            "title": "XML Attributes",
-            "description": "XML attributes are prefixed with @ in JSON output to distinguish them from child elements"
-          },
-          "arrays": {
-            "title": "Array Detection",
-            "description": "Repeated elements are automatically converted to arrays in JSON output"
-          },
-          "mixed": {
-            "title": "Mixed Content",
-            "description": "Text content mixed with elements is preserved using special notation"
-          }
-        },
-        "practices": {
-          "input": {
-            "title": "Input Handling",
-            "items": {
-              "validate": "Always validate XML input",
-              "arrays": "Handle arrays consistently",
-              "types": "Preserve data types"
-            }
-          },
-          "implementation": {
-            "title": "Implementation",
-            "items": {
-              "libraries": "Use reliable libraries",
-              "testing": "Test with various structures",
-              "errors": "Handle errors gracefully"
-            }
-          }
-        },
-        "convertingIntro": "When converting XML to JSON, there are several considerations to keep in mind:",
-        "features": {
-          "xml": {
-            "title": "XML Features",
-            "items": {
-              "tags": "Uses tags and attributes",
-              "verbose": "More verbose syntax",
-              "comments": "Supports comments"
-            }
-          },
-          "json": {
-            "title": "JSON Features",
-            "items": {
-              "pairs": "Uses key-value pairs",
-              "lightweight": "Lightweight syntax",
-              "native": "Native JavaScript support"
-            }
-          }
-        },
-        "exampleIntro": "Here's a simple example of XML to JSON conversion:",
-        "examples": {
-          "xmlExample": "<person id=\"123\">\n  <name>John Doe</name>\n  <age>30</age>\n  <emails>\n    <email>john@example.com</email>\n    <email>doe@example.com</email>\n  </emails>\n</person>",
-          "jsonExample": "{\n  \"person\": {\n    \"@id\": \"123\",\n    \"name\": \"John Doe\",\n    \"age\": \"30\",\n    \"emails\": {\n      \"email\": [\n        \"john@example.com\",\n        \"doe@example.com\"\n      ]\n    }\n  }\n}"
-        }
-      }
+      "description": "Learn how to convert between XML and JSON formats with detailed examples, best practices, and a free online converter tool."
     },
     "jsonToYaml": {
       "title": "JSON and YAML Conversion Guide",
-      "description": "Master the complete guide to converting between JSON and YAML formats, including practical examples and best practices. Learn how to efficiently convert between these popular data formats.",
-      "toolName": "JSON-YAML Converter",
-      "sections": {
-        "understanding": "Understanding JSON and YAML",
-        "differences": "Format Comparison",
-        "examples": "Conversion Example"
-      },
-      "content": {
-        "intro": "JSON (JavaScript Object Notation) and YAML (YAML Ain't Markup Language) are two popular data serialization formats. JSON is known for its concise syntax and wide language support, while YAML is favored for its better readability and more flexible syntax features.",
-        "features": {
-          "json": {
-            "title": "JSON Features",
-            "items": {
-              "pairs": "Concise syntax structure",
-              "lightweight": "Wide language support",
-              "native": "Strict data types"
-            }
-          },
-          "yaml": {
-            "title": "YAML Features",
-            "items": {
-              "indentation": "Better readability",
-              "comments": "Comment support",
-              "readable": "Flexible syntax"
-            }
-          }
-        },
-        "exampleIntro": "Here's a simple example of JSON to YAML conversion:",
-        "examples": {
-          "jsonExample": "{\n  \"person\": {\n    \"name\": \"John Doe\",\n    \"age\": 30,\n    \"email\": \"john@example.com\",\n    \"address\": {\n      \"street\": \"123 Main St\",\n      \"city\": \"Anytown\",\n      \"country\": \"USA\"\n    }\n  }\n}",
-          "yamlExample": "person:\n  name: John Doe\n  age: 30\n  email: john@example.com\n  address:\n    street: 123 Main St\n    city: Anytown\n    country: USA"
-        }
-      }
+      "description": "Master the complete guide to converting between JSON and YAML formats, including practical examples and best practices."
+    },
+    "jsoncGuide": {
+      "title": "How to Handle JSON with Comments (JSONC)",
+      "description": "Learn how to handle JSON with comments, including parsing methods and common issues."
+    },
+    "jsonEscapeGuide": {
+      "title": "Complete Guide to JSON Escaping and Unescaping",
+      "description": "Understand JSON escaping and unescaping, common characters, and handling in different languages."
+    },
+    "jsonCompressionGuide": {
+      "title": "Best Practices for JSON Compression and Beautification",
+      "description": "Explore the importance of JSON compression and beautification, tools, and implementation methods."
     },
     "jsonStringConversion": {
       "title": "How to Convert JSON from String: A Comprehensive Guide",
       "description": "Learn how to convert JSON strings into usable objects in JavaScript, Python, and Java. A step-by-step guide with examples, error handling tips, and best practices for beginners and experts."
+    },
+    "jsonHttpExtract": {
+      "title": "How to Perform HTTP Extract from JSON: A Step-by-Step Guide",
+      "description": "Learn how to perform HTTP extract from JSON with step-by-step examples in Python, JavaScript, and Java. Extract data from APIs efficiently and securely."
     }
   }
 } 
